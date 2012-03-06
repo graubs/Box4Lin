@@ -1,0 +1,191 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/42/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods
+END
+ExportTagsMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/ExportTagsMethod.java
+END
+DeleteMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/DeleteMethod.java
+END
+CreateFolderMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/CreateFolderMethod.java
+END
+LogoutMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/LogoutMethod.java
+END
+DownloadMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/DownloadMethod.java
+END
+RequestFriendsMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/RequestFriendsMethod.java
+END
+AddToMyBoxMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/AddToMyBoxMethod.java
+END
+GetTicketMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/GetTicketMethod.java
+END
+GetFileInfoMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/GetFileInfoMethod.java
+END
+GetFriendsMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/GetFriendsMethod.java
+END
+RenameMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/RenameMethod.java
+END
+AddCommentMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/!svn/ver/29/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/AddCommentMethod.java
+END
+AddToTagMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/AddToTagMethod.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/package.html
+END
+SetDescriptionMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/SetDescriptionMethod.java
+END
+BaseBoxMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/!svn/ver/27/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/BaseBoxMethod.java
+END
+PublicShareMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/PublicShareMethod.java
+END
+DeleteCommentMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/!svn/ver/29/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/DeleteCommentMethod.java
+END
+MoveMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/MoveMethod.java
+END
+VerifyRegistrationEmailMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/VerifyRegistrationEmailMethod.java
+END
+GetCommentsMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/!svn/ver/29/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/GetCommentsMethod.java
+END
+SearchMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/!svn/ver/42/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/SearchMethod.java
+END
+RegisterNewUserMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/RegisterNewUserMethod.java
+END
+GetAccountInfoMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/!svn/ver/22/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/GetAccountInfoMethod.java
+END
+UploadMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/UploadMethod.java
+END
+PublicUnshareMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/PublicUnshareMethod.java
+END
+PrivateShareMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/PrivateShareMethod.java
+END
+GetAuthTokenMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/GetAuthTokenMethod.java
+END
+CopyMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/25/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/CopyMethod.java
+END
+GetAccountTreeMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/!svn/ver/19/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/GetAccountTreeMethod.java
+END
+GetUpdatesMethod.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/!svn/ver/31/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/impl/simple/methods/GetUpdatesMethod.java
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/42/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/test
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/test/package.html
+END
+SoapTestCase.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/test/SoapTestCase.java
+END
+BaseBoxTestCase.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/42/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/test/BaseBoxTestCase.java
+END
+XMLTestCase.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/test/XMLTestCase.java
+END
+RestTestCase.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/test/RestTestCase.java
+END
+Box4JTestSuite.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/!svn/ver/25/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/test/Box4JTestSuite.java
+END

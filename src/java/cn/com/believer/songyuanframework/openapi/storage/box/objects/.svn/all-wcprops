@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/35/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/objects
+END
+BoxTag.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/!svn/ver/29/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/objects/BoxTag.java
+END
+UploadResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/29/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/objects/UploadResult.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/objects/package.html
+END
+Box.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/29/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/objects/Box.java
+END
+BoxFriend.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/29/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/objects/BoxFriend.java
+END
+BoxFolder.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/35/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/objects/BoxFolder.java
+END
+BoxAbstractFile.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/29/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/objects/BoxAbstractFile.java
+END
+BoxSubscription.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/29/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/objects/BoxSubscription.java
+END
+BoxFile.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/35/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/objects/BoxFile.java
+END
+BoxUser.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/!svn/ver/29/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/objects/BoxUser.java
+END
+BoxException.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/objects/BoxException.java
+END
+BoxUpdate.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/32/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/objects/BoxUpdate.java
+END
+BoxComment.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/!svn/ver/29/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/objects/BoxComment.java
+END

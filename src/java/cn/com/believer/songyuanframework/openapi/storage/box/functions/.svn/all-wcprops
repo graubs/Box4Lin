@@ -1,0 +1,377 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/42/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions
+END
+GetFriendsRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/!svn/ver/21/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/GetFriendsRequest.java
+END
+BoxResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/BoxResponse.java
+END
+AddToMyBoxRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/!svn/ver/21/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/AddToMyBoxRequest.java
+END
+GetCommentsResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/!svn/ver/27/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/GetCommentsResponse.java
+END
+VerifyRegistrationEmailResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/VerifyRegistrationEmailResponse.java
+END
+RegisterNewUserResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/RegisterNewUserResponse.java
+END
+SearchResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/42/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/SearchResponse.java
+END
+RegisterNewUserRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/RegisterNewUserRequest.java
+END
+SearchRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/27/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/SearchRequest.java
+END
+GetAccountInfoResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/!svn/ver/21/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/GetAccountInfoResponse.java
+END
+GetCommentsRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/!svn/ver/27/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/GetCommentsRequest.java
+END
+VerifyRegistrationEmailRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/VerifyRegistrationEmailRequest.java
+END
+DeleteRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/21/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/DeleteRequest.java
+END
+ExportTagsRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/!svn/ver/21/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/ExportTagsRequest.java
+END
+UploadResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/UploadResponse.java
+END
+PublicUnshareResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/PublicUnshareResponse.java
+END
+PrivateShareResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/PrivateShareResponse.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/package.html
+END
+GetAuthTokenResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/GetAuthTokenResponse.java
+END
+DeleteCommentRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/27/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/DeleteCommentRequest.java
+END
+CopyRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/25/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/CopyRequest.java
+END
+GetAccountTreeRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/!svn/ver/21/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/GetAccountTreeRequest.java
+END
+PublicShareRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/!svn/ver/21/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/PublicShareRequest.java
+END
+CopyResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/25/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/CopyResponse.java
+END
+GetAccountTreeResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/GetAccountTreeResponse.java
+END
+SetDescriptionRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/!svn/ver/21/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/SetDescriptionRequest.java
+END
+GetUpdatesResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/!svn/ver/31/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/GetUpdatesResponse.java
+END
+GetAuthTokenRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/GetAuthTokenRequest.java
+END
+PublicUnshareRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/21/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/PublicUnshareRequest.java
+END
+AddToTagRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/!svn/ver/21/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/AddToTagRequest.java
+END
+RenameRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/21/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/RenameRequest.java
+END
+AddCommentRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/!svn/ver/27/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/AddCommentRequest.java
+END
+GetFileInfoRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/!svn/ver/21/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/GetFileInfoRequest.java
+END
+ExportTagsResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/ExportTagsResponse.java
+END
+UploadRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/21/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/UploadRequest.java
+END
+GetTicketRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/GetTicketRequest.java
+END
+DeleteResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/DeleteResponse.java
+END
+LogoutResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/LogoutResponse.java
+END
+CreateFolderResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/CreateFolderResponse.java
+END
+GetAccountInfoRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/!svn/ver/21/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/GetAccountInfoRequest.java
+END
+RequestFriendsRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/!svn/ver/21/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/RequestFriendsRequest.java
+END
+DownloadResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/DownloadResponse.java
+END
+DownloadRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/!svn/ver/21/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/DownloadRequest.java
+END
+RequestFriendsResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/RequestFriendsResponse.java
+END
+CreateFolderRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/!svn/ver/21/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/CreateFolderRequest.java
+END
+LogoutRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/!svn/ver/21/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/LogoutRequest.java
+END
+BoxRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/!svn/ver/25/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/BoxRequest.java
+END
+AddToMyBoxResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/AddToMyBoxResponse.java
+END
+GetTicketResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/GetTicketResponse.java
+END
+GetFileInfoResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/GetFileInfoResponse.java
+END
+GetFriendsResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/GetFriendsResponse.java
+END
+RenameResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/RenameResponse.java
+END
+AddCommentResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/!svn/ver/29/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/AddCommentResponse.java
+END
+AddToTagResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/AddToTagResponse.java
+END
+MoveRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/21/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/MoveRequest.java
+END
+BoxAuthRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/!svn/ver/25/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/BoxAuthRequest.java
+END
+GetUpdatesRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/!svn/ver/27/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/GetUpdatesRequest.java
+END
+SetDescriptionResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/SetDescriptionResponse.java
+END
+PublicShareResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/PublicShareResponse.java
+END
+DeleteCommentResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/!svn/ver/27/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/DeleteCommentResponse.java
+END
+PrivateShareRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/!svn/ver/21/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/PrivateShareRequest.java
+END
+MoveResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/!svn/ver/11/trunk/box4j/src/java/cn/com/believer/songyuanframework/openapi/storage/box/functions/MoveResponse.java
+END
