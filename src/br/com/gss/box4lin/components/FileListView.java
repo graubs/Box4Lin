@@ -29,9 +29,12 @@ import javax.swing.tree.DefaultMutableTreeNode;
  */
 public class FileListView extends JTable implements KeyListener, MouseListener {
 
-    public static final int DEFAULT_ROW_HEIGHT = 50;
+    public static final int DEFAULT_ROW_HEIGHT = 40;
+    
     public static final int BOX_FILE_ATTRIB_QTY = 7;
+    
     public static final int NO_ROW_SELECTED = -1;
+    
     private String currentNodeID;
 
     public FileListView() {
@@ -77,12 +80,8 @@ public class FileListView extends JTable implements KeyListener, MouseListener {
 
         result[0] = file.getId();
         result[1] = file.getName();
-        result[2] = BoxUtil.getRightMeasuring(file.getSize());
-//        result[3] = BoxUtil.getFormattedDate(new Date(file.getCreated()), "dd/MM/yyyy HH:mm:ss");
-//        result[4] = BoxUtil.getFormattedDate(new Date(file.getUpdated()), "dd/MM/yyyy HH:mm:ss");
-        Date dateCreated = new Date();
-        dateCreated.setTime(file.getCreated());
-        result[3] = dateCreated;
+        result[2] = BoxUtil.getRightMeasuring(file.getSize());       
+        result[3] = new Date(file.getCreated());        
         result[4] = new Date(file.getUpdated());
         result[5] = file.getTags().isEmpty() ? "" : file.getTags();
         result[6] = file.getKeyword();
