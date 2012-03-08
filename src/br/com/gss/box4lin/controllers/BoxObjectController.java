@@ -93,7 +93,7 @@ public class BoxObjectController {
             throws IOException, BoxException, NullPointerException {
     
         File file = new File(path, fileName);
-        
+                
         DownloadRequest request = BoxRequestFactory.createDownloadRequest(authToken, uploadedFileId, true, file);
         
         return BoxExternalFactory.getBoxExternalAPI().download(request).getOutFile();

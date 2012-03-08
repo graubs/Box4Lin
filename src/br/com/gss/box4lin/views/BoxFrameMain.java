@@ -26,27 +26,27 @@ import javax.swing.tree.DefaultMutableTreeNode;
  *
  * @author glauber
  */
-public class MainTest extends javax.swing.JFrame {
+public class BoxFrameMain extends javax.swing.JFrame {
 
     /**
      * Creates new form MainTest
      */
-    public MainTest(String authToken) {
+    public BoxFrameMain(String authToken) {
         setLookAndFeel();
         initComponents();
-        
+
         this.authToken = BoxUserSessionFactory.getInstance().getUserSession().getAuthToken();
-        
+
         if (this.authToken != null && !this.authToken.equals("")) {
             //Always retrieve the root node on startup
             showBoxResource(ApplicationConstants.ROOT_NODE);
-        }        
+        }
     }
 
-    private void showBoxResource(String node) {
-        
+    public void showBoxResource(String node) {
+
         try {
-            
+
             String[] params = {"nozip", "onelevel"};
             remoteTree = BoxObjectController.getBoxObjectController().getRemoteTree(
                     authToken, node, params).getTree();
@@ -54,32 +54,32 @@ public class MainTest extends javax.swing.JFrame {
             fileListMain.fillTable(remoteTree);
             updateStorageInfo();
         } catch (IOException ex) {
-            Logger.getLogger(MainTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BoxFrameMain.class.getName()).log(Level.SEVERE, null, ex);
         } catch (BoxException ex) {
-            Logger.getLogger(MainTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BoxFrameMain.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NullPointerException ex) {
-            Logger.getLogger(MainTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BoxFrameMain.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
     }
-    
-    private void updateStorageInfo(){
+
+    private void updateStorageInfo() {
         try {
             Map info = BoxInfraController.getInstance().getStorageInfo(
                     BoxUserSessionFactory.getInstance().getUserSession().getTicket());
-            long spaceAmount = (long)info.get(BoxInfraController.KEY_SPACE_AMOUNT);
-            long spaceUsed = (long)info.get(BoxInfraController.KEY_SPACE_USED);
-            
+            long spaceAmount = (long) info.get(BoxInfraController.KEY_SPACE_AMOUNT);
+            long spaceUsed = (long) info.get(BoxInfraController.KEY_SPACE_USED);
+
             double spaceAmountInGB = BoxUtil.bytesToGigaBytes(spaceAmount);
             double spaceUsedInGB = BoxUtil.bytesToGigaBytes(spaceUsed);
             storageInfo.setMinimum(0);
-            storageInfo.setMaximum((int)spaceAmountInGB);
-            storageInfo.setValue((int)spaceUsedInGB);
+            storageInfo.setMaximum((int) spaceAmountInGB);
+            storageInfo.setValue((int) spaceUsedInGB);
             storageInfo.setString("Using " + BoxUtil.getRightMeasuring(spaceUsed) + " of " + BoxUtil.getRightMeasuring(spaceAmount));
         } catch (IOException ex) {
-            Logger.getLogger(MainTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BoxFrameMain.class.getName()).log(Level.SEVERE, null, ex);
         } catch (BoxException ex) {
-            Logger.getLogger(MainTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BoxFrameMain.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -95,18 +95,25 @@ public class MainTest extends javax.swing.JFrame {
         scrollPaneView = new javax.swing.JScrollPane();
         fileListMain = new br.com.gss.box4lin.components.FileListView();
         toolBarMain = new javax.swing.JToolBar();
+        backOneLevelButton = new javax.swing.JButton();
+        jSeparator7 = new javax.swing.JToolBar.Separator();
         getFileButton = new javax.swing.JButton();
         sendFileButton = new javax.swing.JButton();
         createFileButton = new javax.swing.JButton();
         deleteFileButton = new javax.swing.JButton();
+        jSeparator4 = new javax.swing.JToolBar.Separator();
         createFolderButton = new javax.swing.JButton();
         deleteFolderButton = new javax.swing.JButton();
+        jSeparator5 = new javax.swing.JToolBar.Separator();
         refreshBoxButton = new javax.swing.JButton();
+        jSeparator6 = new javax.swing.JToolBar.Separator();
         shareItemButton = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jSeparator8 = new javax.swing.JToolBar.Separator();
         storageInfo = new javax.swing.JProgressBar();
         tollBarNotification = new javax.swing.JToolBar();
         notificationLabel = new javax.swing.JLabel();
+        jSeparator9 = new javax.swing.JToolBar.Separator();
         notificationProgressBar = new javax.swing.JProgressBar();
         menuBarMain = new javax.swing.JMenuBar();
         menuBox = new javax.swing.JMenu();
@@ -131,7 +138,6 @@ public class MainTest extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Box4Lin");
         setMinimumSize(new java.awt.Dimension(800, 600));
-        setPreferredSize(new java.awt.Dimension(1024, 600));
 
         fileListMain.setAutoCreateColumnsFromModel(false);
         fileListMain.setModel(new javax.swing.table.DefaultTableModel(
@@ -146,6 +152,22 @@ public class MainTest extends javax.swing.JFrame {
 
         toolBarMain.setFloatable(false);
         toolBarMain.setRollover(true);
+
+        backOneLevelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/gss/box4lin/images/previo.png"))); // NOI18N
+        backOneLevelButton.setText("Back");
+        backOneLevelButton.setFocusable(false);
+        backOneLevelButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        backOneLevelButton.setMaximumSize(new java.awt.Dimension(80, 78));
+        backOneLevelButton.setMinimumSize(new java.awt.Dimension(80, 78));
+        backOneLevelButton.setPreferredSize(new java.awt.Dimension(80, 78));
+        backOneLevelButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        backOneLevelButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                backOneLevelButtonMouseReleased(evt);
+            }
+        });
+        toolBarMain.add(backOneLevelButton);
+        toolBarMain.add(jSeparator7);
 
         getFileButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/gss/box4lin/images/imp.png"))); // NOI18N
         getFileButton.setText("Get File");
@@ -214,6 +236,7 @@ public class MainTest extends javax.swing.JFrame {
             }
         });
         toolBarMain.add(deleteFileButton);
+        toolBarMain.add(jSeparator4);
 
         createFolderButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/gss/box4lin/images/folad.png"))); // NOI18N
         createFolderButton.setText("Add Folder");
@@ -244,6 +267,7 @@ public class MainTest extends javax.swing.JFrame {
             }
         });
         toolBarMain.add(deleteFolderButton);
+        toolBarMain.add(jSeparator5);
 
         refreshBoxButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/gss/box4lin/images/ref.png"))); // NOI18N
         refreshBoxButton.setText("Refresh");
@@ -261,6 +285,7 @@ public class MainTest extends javax.swing.JFrame {
             }
         });
         toolBarMain.add(refreshBoxButton);
+        toolBarMain.add(jSeparator6);
 
         shareItemButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/gss/box4lin/images/favad.png"))); // NOI18N
         shareItemButton.setText("Share");
@@ -285,6 +310,7 @@ public class MainTest extends javax.swing.JFrame {
         jButton1.setPreferredSize(new java.awt.Dimension(80, 78));
         jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         toolBarMain.add(jButton1);
+        toolBarMain.add(jSeparator8);
 
         storageInfo.setMaximumSize(new java.awt.Dimension(200, 20));
         storageInfo.setMinimumSize(new java.awt.Dimension(200, 20));
@@ -298,6 +324,7 @@ public class MainTest extends javax.swing.JFrame {
         notificationLabel.setMinimumSize(new java.awt.Dimension(800, 14));
         notificationLabel.setPreferredSize(new java.awt.Dimension(800, 14));
         tollBarNotification.add(notificationLabel);
+        tollBarNotification.add(jSeparator9);
         tollBarNotification.add(notificationProgressBar);
 
         menuBox.setText("Box");
@@ -461,11 +488,11 @@ public class MainTest extends javax.swing.JFrame {
                         showBoxResource(fileListMain.getCurrentNodeID());
                     }
                 } catch (IOException ex) {
-                    Logger.getLogger(MainTest.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(BoxFrameMain.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (BoxException ex) {
-                    Logger.getLogger(MainTest.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(BoxFrameMain.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (NullPointerException ex) {
-                    Logger.getLogger(MainTest.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(BoxFrameMain.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         } else {
@@ -476,6 +503,10 @@ public class MainTest extends javax.swing.JFrame {
     }//GEN-LAST:event_deleteFileButtonMouseReleased
 
     private void getFileButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_getFileButtonMouseReleased
+        getFile();
+    }//GEN-LAST:event_getFileButtonMouseReleased
+
+    public void getFile() {
         try {
             if (!fileListMain.isAnyRowSelected()) {
                 JOptionPane.showMessageDialog(
@@ -503,14 +534,14 @@ public class MainTest extends javax.swing.JFrame {
                     ApplicationConstants.APPLICATION_NAME, JOptionPane.INFORMATION_MESSAGE);
 
         } catch (IOException ex) {
-            Logger.getLogger(MainTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BoxFrameMain.class.getName()).log(Level.SEVERE, null, ex);
         } catch (BoxException ex) {
-            Logger.getLogger(MainTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BoxFrameMain.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NullPointerException ex) {
-            Logger.getLogger(MainTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BoxFrameMain.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_getFileButtonMouseReleased
-
+    }
+    
     private void createFolderButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createFolderButtonMouseReleased
         String folderName = JOptionPane.showInputDialog(this, "Type the folder name:", ApplicationConstants.APPLICATION_NAME, JOptionPane.OK_CANCEL_OPTION);
         if (folderName != null && folderName.length() > 0) {
@@ -524,16 +555,16 @@ public class MainTest extends javax.swing.JFrame {
                 }
                 showBoxResource(fileListMain.getCurrentNodeID());
             } catch (IOException ex) {
-                Logger.getLogger(MainTest.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(BoxFrameMain.class.getName()).log(Level.SEVERE, null, ex);
             } catch (BoxException ex) {
-                Logger.getLogger(MainTest.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(BoxFrameMain.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }//GEN-LAST:event_createFolderButtonMouseReleased
 
     private void deleteFolderButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteFolderButtonMouseReleased
         if (fileListMain.isAnyRowSelected()) {
-            if (JOptionPane.showConfirmDialog(this, "Are you sure you want to delete this folder and it content?", ApplicationConstants.APPLICATION_NAME, JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
+            if (JOptionPane.showConfirmDialog(this, "Are you sure you want to delete this folder and all its contents?", ApplicationConstants.APPLICATION_NAME, JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
                 try {
                     String targetID = fileListMain.getValueAt(fileListMain.getSelectedRow(), FileListFields.FILE_ID.getId()).toString();
                     DeleteResponse response = BoxObjectController.getBoxObjectController().deleteFile(authToken, ApplicationConstants.TARGET_FOLDER, targetID);
@@ -549,11 +580,11 @@ public class MainTest extends javax.swing.JFrame {
                         showBoxResource(fileListMain.getCurrentNodeID());
                     }
                 } catch (IOException ex) {
-                    Logger.getLogger(MainTest.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(BoxFrameMain.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (BoxException ex) {
-                    Logger.getLogger(MainTest.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(BoxFrameMain.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (NullPointerException ex) {
-                    Logger.getLogger(MainTest.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(BoxFrameMain.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         } else {
@@ -594,11 +625,11 @@ public class MainTest extends javax.swing.JFrame {
             }
 
         } catch (IOException ex) {
-            Logger.getLogger(MainTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BoxFrameMain.class.getName()).log(Level.SEVERE, null, ex);
         } catch (BoxException ex) {
-            Logger.getLogger(MainTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BoxFrameMain.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NullPointerException ex) {
-            Logger.getLogger(MainTest.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BoxFrameMain.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_sendFileButtonMouseReleased
 
@@ -630,6 +661,10 @@ public class MainTest extends javax.swing.JFrame {
         refreshBoxButtonMouseReleased(evt);
     }//GEN-LAST:event_itemRefreshBoxMouseReleased
 
+    private void backOneLevelButtonMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backOneLevelButtonMouseReleased
+        fileListMain.processBackEvent(fileListMain);
+    }//GEN-LAST:event_backOneLevelButtonMouseReleased
+
     private void setLookAndFeel() {
 
         try {
@@ -640,16 +675,17 @@ public class MainTest extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainTest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BoxFrameMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainTest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BoxFrameMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainTest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BoxFrameMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainTest.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BoxFrameMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backOneLevelButton;
     private javax.swing.JButton createFileButton;
     private javax.swing.JButton createFolderButton;
     private javax.swing.JButton deleteFileButton;
@@ -672,6 +708,12 @@ public class MainTest extends javax.swing.JFrame {
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
+    private javax.swing.JToolBar.Separator jSeparator4;
+    private javax.swing.JToolBar.Separator jSeparator5;
+    private javax.swing.JToolBar.Separator jSeparator6;
+    private javax.swing.JToolBar.Separator jSeparator7;
+    private javax.swing.JToolBar.Separator jSeparator8;
+    private javax.swing.JToolBar.Separator jSeparator9;
     private javax.swing.JMenuBar menuBarMain;
     private javax.swing.JMenu menuBox;
     private javax.swing.JMenu menuFile;

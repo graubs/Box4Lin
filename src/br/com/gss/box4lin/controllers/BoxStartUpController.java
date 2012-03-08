@@ -8,7 +8,7 @@ import br.com.gss.box4lin.constants.ApplicationConstants;
 import br.com.gss.box4lin.entities.BoxUserSession;
 import br.com.gss.box4lin.factories.BoxUserSessionFactory;
 import br.com.gss.box4lin.persistence.IOManager;
-import br.com.gss.box4lin.views.MainTest;
+import br.com.gss.box4lin.views.BoxFrameMain;
 import cn.com.believer.songyuanframework.openapi.storage.box.objects.BoxException;
 import java.awt.EventQueue;
 import java.io.IOException;
@@ -22,12 +22,14 @@ import java.util.logging.Logger;
  */
 public class BoxStartUpController {
 
+    private BoxStartUpController(){}
+    
     public static void main(String [] args){
         EventQueue.invokeLater(new Runnable() {
 
             @Override
             public void run() {
-                new MainTest(startSession()).setVisible(true);
+                new BoxFrameMain(startSession()).setVisible(true);
             }
         });
     }
@@ -63,10 +65,8 @@ public class BoxStartUpController {
             
             String authToken = BoxInfraController.getInstance().getAuthToken(ticket).getAuthToken();
             
-            userSession = new BoxUserSession(userName, password);
-            userSession.setTicket(ticket);
-            userSession.setAuthToken(authToken);
-            
+            userSession = new BoxUserSession(userName, ticket, authToken);
+                        
             IOManager.saveObject(ApplicationConstants.LAST_SESSION_FILE, userSession);
             
         } catch (IOException ex) {

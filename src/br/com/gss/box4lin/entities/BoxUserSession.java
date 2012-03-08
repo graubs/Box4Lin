@@ -13,8 +13,7 @@ import java.util.Date;
  */
 public class BoxUserSession extends AbstractBDF{
 
-    private String userName;
-    private String password;
+    private String userName;    
     private String authToken;
     private String ticket;
     private Date firstLogon;
@@ -23,14 +22,13 @@ public class BoxUserSession extends AbstractBDF{
     
     public BoxUserSession(){}
     
-    public BoxUserSession(String userName, String password){
-        this.userName = userName;
-        this.password = password;
+    public BoxUserSession(String userName){
+        this.userName = userName;        
     }
-    
-    public BoxUserSession(String userName, String password, String authToken){
+        
+    public BoxUserSession(String userName, String ticket, String authToken){
         this.userName = userName;
-        this.password = password;
+        this.ticket = ticket;
         this.authToken = authToken;
     }
 
@@ -64,14 +62,6 @@ public class BoxUserSession extends AbstractBDF{
 
     public void setLastLogon(Date lastLogon) {
         this.lastLogon = lastLogon;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getUserName() {
