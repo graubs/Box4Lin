@@ -75,7 +75,7 @@ public class BoxFrameMain extends javax.swing.JFrame {
             storageInfo.setMinimum(0);
             storageInfo.setMaximum((int) spaceAmountInGB);
             storageInfo.setValue((int) spaceUsedInGB);
-            storageInfo.setString("Using " + BoxUtil.getRightMeasuring(spaceUsed) + " of " + BoxUtil.getRightMeasuring(spaceAmount));
+            storageInfo.setString("Using " + BoxUtil.getRightMeasure(spaceUsed) + " of " + BoxUtil.getRightMeasure(spaceAmount));
         } catch (IOException ex) {
             Logger.getLogger(BoxFrameMain.class.getName()).log(Level.SEVERE, null, ex);
         } catch (BoxException ex) {

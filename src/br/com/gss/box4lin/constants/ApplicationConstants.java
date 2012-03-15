@@ -30,6 +30,14 @@ public interface ApplicationConstants {
     
     public static final String LAST_SESSION_FILE = "505934872" + AbstractBDF.FILE_EXTENSION;
     
+    public static final String IMAGE_DEFAULT_EXTENSION = ".png";
+    
+    public static final String IMAGE_DEFAULT_PATH = "images/";
+    
+    public static final String DEFAULT_ICON_FILE = IMAGE_DEFAULT_PATH + "default" + IMAGE_DEFAULT_EXTENSION;
+    
+    public static final String DEFAULT_FOLDER_FILE = IMAGE_DEFAULT_PATH + "folder" + IMAGE_DEFAULT_EXTENSION;
+    
     //Status Constants
     public static final String STATUS_S_DELETE_NODE = "s_delete_node";
     

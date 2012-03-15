@@ -10,20 +10,15 @@ package br.com.gss.box4lin.constants;
  */
 public enum FileListFields {
 
-//    FILE_CHECK                  (0, "Select"),
-//    FILE_ICON                   (1, " ", 30, 50),
-//    FILE_NAME                   (2, "Name", 30, 500),
-//    FILE_DESCRIPTION            (3, "Description", 30, 500),
-//    FILE_SIZE                   (4, "Size", 30, 500),
-//    FILE_CREATION_DATE          (5, "Creation date", 30, 500),
-//    FILE_LAST_MODIFIED_DATE     (6, "Last modified date", 30, 500);
-    FILE_ID (0, "ID", 10, 30),
-    FILE_NAME (1, "Name", 100, 500),
-    FILE_SIZE (2, "Size", 10, 30),
-    FILE_CREATED (3, "Date created", 50, 100),
-    FILE_UPDATED (4, "Date updated", 50, 100),
-    FILE_TAGS (5, "Tags", 100, 500),
-    FILE_KEYWORD (6, "Keywords", 100, 500);
+    //Attrib name       Arrtib ID   Column Name     Min Column Size     Pref Column Size
+    FILE_ID             (0,         "ID",           0,                  0),
+    FILE_ICON           (1,         "",             30,                 60),
+    FILE_NAME           (2,         "Name",         200,                500),
+    FILE_SIZE           (3,         "Size",         100,                100),
+    FILE_CREATED        (4,         "Date created", 150,                150),
+    FILE_UPDATED        (5,         "Date updated", 150,                150),
+    FILE_TAGS           (6,         "Tags",         200,                500),
+    FILE_KEYWORD        (7,         "Keywords",     200,                500);
     
     private int id;
     private String value;

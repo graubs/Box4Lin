@@ -16,7 +16,7 @@ public class BoxFrameWizzard extends javax.swing.JFrame {
      * Creates new form BoxFrameWizzard
      */
     public BoxFrameWizzard() {
-        initComponents();
+        initComponents();        
     }
     
     private void goToNextTab(JTabbedPane pane){
@@ -142,10 +142,9 @@ public class BoxFrameWizzard extends javax.swing.JFrame {
                         .addComponent(loginNextButton))
                     .addComponent(jTextField1)
                     .addComponent(jPasswordField1)
-                    .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel1)
-                        .addComponent(jLabel5)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE)))
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 291, Short.MAX_VALUE))
                 .addContainerGap())
         );
         panelLoginLayout.setVerticalGroup(

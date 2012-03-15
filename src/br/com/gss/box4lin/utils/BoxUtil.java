@@ -41,7 +41,7 @@ public class BoxUtil {
         return (double)sizeInBytes / 1073741824;
     }
     
-    public static String getRightMeasuring(long sizeInBytes){
+    public static String getRightMeasure(long sizeInBytes){
         if(sizeInBytes < 1024){
             return String.valueOf(sizeInBytes) + " Bytes";
         }else if(sizeInBytes >=1024 && sizeInBytes < 1048576){

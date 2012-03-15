@@ -4,6 +4,7 @@
  */
 package br.com.gss.box4lin.components;
 
+import br.com.gss.box4lin.constants.ApplicationConstants;
 import br.com.gss.box4lin.constants.FileListFields;
 import br.com.gss.box4lin.controllers.BoxObjectController;
 import br.com.gss.box4lin.factories.BoxUserSessionFactory;
@@ -18,11 +19,13 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Date;
 import java.util.Stack;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.tree.DefaultMutableTreeNode;
@@ -34,7 +37,7 @@ import javax.swing.tree.DefaultMutableTreeNode;
 public class FileListView extends JTable implements KeyListener, MouseListener {
 
     public static final int DEFAULT_ROW_HEIGHT = 40;
-    public static final int BOX_FILE_ATTRIB_QTY = 7;
+    public static final int BOX_FILE_ATTRIB_QTY = 8;
     public static final int NO_ROW_SELECTED = -1;
     private String currentNodeID;
     private String previousNodeID;
@@ -50,10 +53,21 @@ public class FileListView extends JTable implements KeyListener, MouseListener {
         addKeyListener(this);
         addMouseListener(this);
         previousNodes = new Stack<>();
+        autoResizeColumns();
+    }
+    
+    public void autoResizeColumns(){
+        for(FileListFields f : FileListFields.values()){            
+            if(f.getId() == FileListFields.FILE_ID.getId()){ //Hide the ID Column
+                getColumn(getColumnName(f.getId())).setMaxWidth(f.getMaximumSize());
+            }
+            getColumn(getColumnName(f.getId())).setPreferredWidth(f.getMaximumSize());
+            getColumn(getColumnName(f.getId())).setMinWidth(f.getMinimumSize());
+        }
     }
 
     private void setDefaultModel() {
-        DefaultTableModel model = new DefaultTableModel(getFieldNames(), 10);
+        DefaultTableModel model = new DefaultTableModel(getFieldNames(), 1);
         setModel(model);
     }
 
@@ -65,6 +79,7 @@ public class FileListView extends JTable implements KeyListener, MouseListener {
             //previousNodeID = currentNodeID;
             currentNodeID = ((BoxAbstractFile) treeNode.getUserObject()).getId();
             String prevNode = previousNodes.isEmpty() ? "" : previousNodes.peek();
+
             if (!prevNode.equals(currentNodeID)) {
                 previousNodes.push(currentNodeID);
             }
@@ -88,15 +103,48 @@ public class FileListView extends JTable implements KeyListener, MouseListener {
         Object[] result = new Object[BOX_FILE_ATTRIB_QTY];
 
         result[0] = file.getId();
-        result[1] = file.getName();
-        result[2] = BoxUtil.getRightMeasuring(file.getSize());
+        result[1] = getImageIcon(file.getName());
+        result[2] = file.getName();
+        result[3] = BoxUtil.getRightMeasure(file.getSize());
         //TODO Date convert from long type is going wrong
-        result[3] = new Date(file.getCreated());
-        result[4] = new Date(file.getUpdated());
-        result[5] = file.getTags().isEmpty() ? "" : file.getTags();
-        result[6] = file.getKeyword();
+        result[4] = new Date(file.getCreated());
+        result[5] = new Date(file.getUpdated());
+        result[6] = file.getTags().isEmpty() ? "" : file.getTags();
+        result[7] = file.getKeyword() == null ? "" : file.getKeyword();
 
         return result;
+    }
+
+    private ImageIcon getImageIcon(String fileName) {
+        ImageIcon icon = null;
+
+        String iconName = getMimeTypeImageName(fileName);
+        //icon = new ImageIcon(getMimeTypeImageName(fileName));
+        //System.out.println(icon.getImage());
+        if(null == iconName || iconName.length() <= 0){
+            icon = new ImageIcon(ApplicationConstants.DEFAULT_FOLDER_FILE);
+        }else{
+            icon = new ImageIcon(ApplicationConstants.DEFAULT_ICON_FILE);
+        }
+        
+        return icon;
+    }
+
+    private String getMimeTypeImageName(String fileName) {
+        String imageName = "";
+        if(fileName.lastIndexOf(".") != -1){
+        imageName = fileName.substring(
+                fileName.lastIndexOf(".") + 1).toUpperCase()
+                + ApplicationConstants.IMAGE_DEFAULT_EXTENSION;
+        }
+        
+        return imageName;
+
+    }
+
+    @Override
+    public Class<?> getColumnClass(int column) {
+        return getValueAt(0, column).getClass();
     }
 
     public DefaultTableModel getTableModel() {
@@ -137,32 +185,32 @@ public class FileListView extends JTable implements KeyListener, MouseListener {
 
     private void processSelectEvent(Object o) {
         if (o instanceof FileListView) {
-            
+
             FileListView view = (FileListView) o;
             int row = view.getSelectedRow();
-            
-            if(row != NO_ROW_SELECTED){
+
+            if (row != NO_ROW_SELECTED) {
                 String targetID = view.getValueAt(row, FileListFields.FILE_ID.getId()).toString();
-            GetFileInfoResponse response = null;
+                GetFileInfoResponse response = null;
 
-            try {
-                String authToken = BoxUserSessionFactory.getInstance().getUserSession().getAuthToken();
+                try {
+                    String authToken = BoxUserSessionFactory.getInstance().getUserSession().getAuthToken();
 
-                response = BoxObjectController.getBoxObjectController().getFileInfo(authToken, targetID);
-                BoxFile file = response.getFile();
-                if (null == file) { //Is Folder, open it
-                    getFrameMain().showBoxResource(
-                            getValueAt(
-                            getSelectedRow(),
-                            FileListFields.FILE_ID.getId()).toString());
-                } else { //Is File, download it
-                    getFrameMain().getFile();
+                    response = BoxObjectController.getBoxObjectController().getFileInfo(authToken, targetID);
+                    BoxFile file = response.getFile();
+                    if (null == file) { //Is Folder, open it
+                        getFrameMain().showBoxResource(
+                                getValueAt(
+                                getSelectedRow(),
+                                FileListFields.FILE_ID.getId()).toString());
+                    } else { //Is File, download it
+                        getFrameMain().getFile();
+                    }
+                } catch (IOException ex) {
+                    Logger.getLogger(FileListView.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (BoxException ex) {
+                    Logger.getLogger(FileListView.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            } catch (IOException ex) {
-                Logger.getLogger(FileListView.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (BoxException ex) {
-                Logger.getLogger(FileListView.class.getName()).log(Level.SEVERE, null, ex);
-            }
             }
 
         }
