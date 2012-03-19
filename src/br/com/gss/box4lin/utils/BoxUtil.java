@@ -19,6 +19,10 @@ public class BoxUtil {
         return sdf.format(date);        
     }
     
+    public static String getDateFromEpoch(long epoch){
+        return new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date(epoch * 1000));
+    }
+    
     public static String getFormattedDouble(Double value){
         DecimalFormat f = new DecimalFormat("#.#");
         return f.format(value);

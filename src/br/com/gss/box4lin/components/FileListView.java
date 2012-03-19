@@ -22,7 +22,6 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.File;
 import java.io.IOException;
-import java.util.Date;
 import java.util.Stack;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -102,17 +101,16 @@ public class FileListView extends JTable implements KeyListener, MouseListener {
     private Object[] getFileFields(BoxAbstractFile file) {
         //TODO: Change implementation to works with generics
         Object[] result = new Object[BOX_FILE_ATTRIB_QTY];
-
+        
         result[0] = file.getId();
         result[1] = getImageIcon(file.getName());
         result[2] = file.getName();
-        result[3] = BoxUtil.getRightMeasure(file.getSize());
-        //TODO Date convert from long type is going wrong
-        result[4] = new Date(file.getCreated());
-        result[5] = new Date(file.getUpdated());
+        result[3] = BoxUtil.getRightMeasure(file.getSize());          
+        result[4] = BoxUtil.getDateFromEpoch(file.getCreated());
+        result[5] = BoxUtil.getDateFromEpoch(file.getUpdated());
         result[6] = file.getTags().isEmpty() ? "" : file.getTags();
         result[7] = file.getKeyword() == null ? "" : file.getKeyword();
-
+        
         return result;
     }
 

@@ -15,8 +15,8 @@ public enum FileListFields {
     FILE_ICON           (1,         "",             30,                 60),
     FILE_NAME           (2,         "Name",         200,                500),
     FILE_SIZE           (3,         "Size",         100,                100),
-    FILE_CREATED        (4,         "Date created", 150,                150),
-    FILE_UPDATED        (5,         "Date updated", 150,                150),
+    FILE_CREATED        (4,         "Date created", 200,                250),
+    FILE_UPDATED        (5,         "Date updated", 200,                250),
     FILE_TAGS           (6,         "Tags",         200,                500),
     FILE_KEYWORD        (7,         "Keywords",     200,                500);
     
