@@ -4,6 +4,7 @@
  */
 package br.com.gss.box4lin.components;
 
+import br.com.gss.box4lin.config.BoxConfigLoader;
 import br.com.gss.box4lin.constants.ApplicationConstants;
 import br.com.gss.box4lin.constants.FileListFields;
 import br.com.gss.box4lin.controllers.BoxObjectController;
@@ -19,7 +20,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.io.FileNotFoundException;
+import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 import java.util.Stack;
@@ -55,10 +56,10 @@ public class FileListView extends JTable implements KeyListener, MouseListener {
         previousNodes = new Stack<>();
         autoResizeColumns();
     }
-    
-    public void autoResizeColumns(){
-        for(FileListFields f : FileListFields.values()){            
-            if(f.getId() == FileListFields.FILE_ID.getId()){ //Hide the ID Column
+
+    public void autoResizeColumns() {
+        for (FileListFields f : FileListFields.values()) {
+            if (f.getId() == FileListFields.FILE_ID.getId()) { //Hide the ID Column
                 getColumn(getColumnName(f.getId())).setMaxWidth(f.getMaximumSize());
             }
             getColumn(getColumnName(f.getId())).setPreferredWidth(f.getMaximumSize());
@@ -119,25 +120,31 @@ public class FileListView extends JTable implements KeyListener, MouseListener {
         ImageIcon icon = null;
 
         String iconName = getMimeTypeImageName(fileName);
-        //icon = new ImageIcon(getMimeTypeImageName(fileName));
-        //System.out.println(icon.getImage());
-        if(null == iconName || iconName.length() <= 0){
+
+        if (null == iconName || iconName.length() <= 0) {
             icon = new ImageIcon(ApplicationConstants.DEFAULT_FOLDER_FILE);
-        }else{
-            icon = new ImageIcon(ApplicationConstants.DEFAULT_ICON_FILE);
+        } else {
+            File image = new File(ApplicationConstants.IMAGE_DEFAULT_PATH + iconName);
+            
+            if (image.isFile()) { //Check if the image file exists
+                icon = new ImageIcon(ApplicationConstants.IMAGE_DEFAULT_PATH + iconName);
+            } else {
+                icon = new ImageIcon(ApplicationConstants.DEFAULT_ICON_FILE);
+            }
         }
-        
+
         return icon;
     }
 
     private String getMimeTypeImageName(String fileName) {
         String imageName = "";
-        if(fileName.lastIndexOf(".") != -1){
-        imageName = fileName.substring(
-                fileName.lastIndexOf(".") + 1).toUpperCase()
-                + ApplicationConstants.IMAGE_DEFAULT_EXTENSION;
+
+        if (fileName.lastIndexOf(".") != -1) {
+            imageName = BoxConfigLoader.getInstance().
+                    getMimeTypeFileName(
+                    fileName.substring(fileName.lastIndexOf(".") + 1).toUpperCase());
         }
-        
+
         return imageName;
 
     }
